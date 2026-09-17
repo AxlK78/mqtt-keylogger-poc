@@ -10,7 +10,7 @@ client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 client.on_message = on_message
 
 client.connect("broker.emqx.io", 1883)
-client.subscribe(TOPIC)
+client.subscribe(TOPIC+"/sauvegarde")
 
 print("En attente de texte...")
 client.loop_forever()
